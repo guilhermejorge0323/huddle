@@ -1,0 +1,270 @@
+/*Gerais */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+:root{
+    --Pink: #ff52bf;
+    --veryPaleCyan: #ebfbff;
+    --VeryDarkCyan: #00252e;
+    --GrayishBlue: #808d99;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins';
+}
+
+/* Header */
+
+header{
+    background-color: rgb(235, 251, 255);
+    background-image: url('images/bg-hero-desktop.svg');
+    background-position: center;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 85vh;
+    padding: 35px 0 0 0;
+}
+
+header button{
+    border: none;
+    outline: none;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+/*Nav*/
+
+header nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+header nav .container a img.logo{
+    width: auto;
+    height: 30px;
+}
+
+header nav .container button{
+    background-color: #fff;
+    border-radius: 60px;
+    padding: 12px 4%;
+    font-weight: 600;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    font-size: 0.8em;
+}
+
+header nav .container button:hover{
+    color: var(--GrayishBlue);
+}
+
+/*Header content*/
+ 
+header #header-content{
+    height: 90%;
+}
+
+header #header-content .container{
+    display: flex;
+    height: 100%;
+    padding: 30px 0;
+  
+}
+
+header #header-content .container div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header #header-content .container #header-content-text{
+    width: 40%;
+    align-items: flex-start;
+}
+
+header #header-content .container #header-content-text h1{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+header #header-content .container #header-content-text p{
+    margin-bottom: 30px;
+}
+
+header #header-content .container #header-content-text button{
+    background-color: var(--Pink);
+    color: #fff;
+    padding: 15px 50px;
+    border-radius: 40px;
+}
+
+header #header-content .container #header-content-image{
+    width: 60%;
+    align-items: flex-end;
+}
+
+header #header-content .container #header-content-image img{
+    width: 85%;
+    height: 95%;
+}
+
+/*Main*/
+
+main #main-area-cards .container{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200vh;
+    align-items: center;
+}
+
+main #main-area-cards .container section{
+    border-radius: 15px;
+    width: 100%;
+    height: 30%;
+    box-shadow: 0 0px 15px 0px rgba(0,0,0,0.2);
+}
+
+main #main-area-cards .container section .container-card{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+
+}
+
+main #main-area-cards .container section .container-card div{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 30px;
+}
+
+main #main-area-cards .container section .container-card div p{
+    color: var(--GrayishBlue);
+    margin-top: 15px;
+}
+
+main #main-area-cards .container section .container-card #main-area-img-card img{
+    width: 90%;
+    height: 90%;
+}
+
+@media (max-width: 1024px) {
+    .container{
+        width: 90%;
+    }
+
+    /* Header */
+
+    header{
+        height: auto;
+    }
+
+    header nav .container a img.logo{
+        width: 90%;
+        height: 25px;
+    }
+
+    header #header-content{
+        margin-top: 45px;
+    }
+
+    header #header-content .container{
+        flex-direction: column;
+    }
+
+    header #header-content .container #header-content-text,
+    header #header-content .container #header-content-image{
+        width: 100%;
+        align-items: center;
+    }
+
+    header #header-content .container #header-content-text h1{
+        font-size: 1.5em;
+    }
+
+    header #header-content .container #header-content-text h1,
+    header #header-content .container #header-content-text p{
+        text-align: center;
+    }
+
+    header #header-content .container #header-content-text p{
+        padding: 0 20px;
+    }
+
+    header #header-content .container #header-content-text button{
+        margin-bottom: 60px;
+    }
+
+    /*Main*/
+
+    main #main-area-cards .container{
+        margin-top: 75px;
+    }
+
+    main #main-area-cards .container section{
+        width: 95%;
+    }
+
+    main #main-area-cards .container section .container-card{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    main #main-area-cards .container section .container-card div{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main #main-area-cards .container section .container-card #main-area-text-card{
+        order: 2;
+    } 
+
+    main #main-area-cards .container section .container-card #main-area-img-card{
+        order: 1;
+    }
+
+    main #main-area-cards .container section .container-card div p{
+        text-align: center;
+        font-size: 0.8em;
+    }
+
+    main #main-area-cards .container section .container-card div h1{
+        font-size: 1.2em;
+    }
+
+
+
+    
+
+    
+}
+
+ 
