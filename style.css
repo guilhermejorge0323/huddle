@@ -197,7 +197,7 @@ main #main-area-cards .container section .container-card #main-area-img-card img
 footer{
     background-color: var(--VeryDarkCyan);
     margin-top: 300px;
-    height: 400vh;
+    padding-bottom: 70px;
 }
 
 footer  #card-footer{
