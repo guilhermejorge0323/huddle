@@ -34,6 +34,23 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Poppins';
 }
 
+button{
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+}
+
+.reset-padding{
+    padding: 0 !important;
+}
+
+.reset-margin{
+    margin: 0 !important;
+}
+
 /* Header */
 
 header{
@@ -175,6 +192,159 @@ main #main-area-cards .container section .container-card #main-area-img-card img
     height: 90%;
 }
 
+/*Footer*/
+
+footer{
+    background-color: var(--VeryDarkCyan);
+    margin-top: 300px;
+    height: 400vh;
+}
+
+footer  #card-footer{
+    background-color: #fff;
+    width: 42%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.6em;
+    padding: 55px 0px;
+    box-shadow: 0 0px 15px 0px rgba(0,0,0,0.2);
+    position: relative;
+    top: -100px;
+    border-radius: 10px;
+    
+}
+
+footer  #card-footer h1{
+    text-align: center;
+    font-weight: 700;
+}
+
+
+footer  #card-footer button{
+    background-color: var(--Pink);
+    color: #fff;
+    padding: 20px 0px;
+    width: 50%;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+footer .container {
+    display: grid;
+    color: #fff;
+    grid-template: 
+        "img img img"
+        "area-contacts area-links area-social"
+        "area-copy area-copy area-copy"
+    ;
+    grid-template-columns: 2fr 2fr 1fr;
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+/*Area contacts*/
+footer .container #area-contacts{
+    grid-area: area-contacts;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .container img{
+    grid-area: img;
+    width: 15%;
+    padding-bottom: 30px;
+}
+
+footer .container #area-contacts .card-info-footer{
+    display: flex;
+    padding-top: 30px;
+}
+
+footer .container #area-contacts .card-info-footer::before{
+    content: " ";
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: left;     
+}
+
+footer .container #area-contacts .card-info-footer p{
+    padding-left: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+footer #card-info1::before{
+    background-image: url('images/icon-location.svg');
+}
+
+footer #card-info2::before{
+    background-image: url('images/icon-phone.svg');
+}
+
+footer #card-info3::before{
+    background-image: url('images/icon-email.svg');
+}
+
+
+/*area links*/
+footer .container #area-links{
+    grid-area: area-links;
+    display: flex;
+    justify-content: center;
+}
+
+footer .container #area-links #links-footer{
+    width: 30%;
+}
+
+footer .container #area-links #links-footer a{
+    display: block;
+    color: #fff;
+    padding-top: 15px;
+}
+
+/*area social*/
+footer .container #area-social{
+    grid-area: area-social;
+    display: flex;
+}
+
+footer .container #area-social .caixa-area-social{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    margin: 0 0 0 14px;
+    border-radius: 500px;
+}
+
+
+
+
+footer .container #area-copy{
+    grid-area: area-copy;
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+
+    
+
+
+
+
+/*Responsivo*/
 @media (max-width: 1024px) {
     .container{
         width: 90%;
@@ -230,6 +400,7 @@ main #main-area-cards .container section .container-card #main-area-img-card img
 
     main #main-area-cards .container section{
         width: 95%;
+        
     }
 
     main #main-area-cards .container section .container-card{
@@ -260,10 +431,58 @@ main #main-area-cards .container section .container-card #main-area-img-card img
         font-size: 1.2em;
     }
 
-
+    /*Footer*/
 
     
+    footer  #card-footer{
+        width: 90%;
+        font-size: 0.42em;
+        padding: 40px 15px;
+    }
 
+    footer  #card-footer button{
+        padding: 12px 0;
+        margin-top: 15px;
+        font-size: 1.5em;
+        width: 60%;
+    }
+
+    footer .container{
+        grid-template: 
+        "img img img"
+        "area-contacts area-contacts area-contacts " 
+        "area-links area-links area-links" 
+        "area-social area-social area-social"
+        "area-copy area-copy area-copy";
+        grid-template-columns: repeat(3,1fr);
+        row-gap: 50px;
+    }
+
+    footer .container img{
+        width: 50%;
+        padding: 0;
+    }
+
+    footer .container #area-links{
+        flex-direction: column;
+    }
+
+    footer .container #area-links #links-footer{
+        padding-top: 20px;
+    }
+
+    footer .container #area-social{
+        justify-content: center;
+    }
+
+
+    footer .container #area-copy{
+        display: flex;
+        justify-content: center;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        
+    }
     
 }
 
